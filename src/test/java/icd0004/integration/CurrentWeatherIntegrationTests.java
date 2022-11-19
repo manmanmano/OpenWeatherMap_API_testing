@@ -19,12 +19,6 @@ public class CurrentWeatherIntegrationTests {
     }
 
     @Test
-    public void givenCity_whenGetCurrentWeatherReport_thenReportShouldContainCity() {
-        assertThat(currentWeatherReport.getCity()).isEqualTo("Keila");
-
-    }
-
-    @Test
     public void givenCity_whenGetCurrentWeatherReport_thenReportShouldContainTemperature() {
         assertThat(currentWeatherReport.getTemperature()).isNotNaN();
     }
