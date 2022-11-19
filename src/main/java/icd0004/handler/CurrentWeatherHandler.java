@@ -21,4 +21,12 @@ public class CurrentWeatherHandler {
 
         return mapCurrentWeatherDataToReport(weatherDto);
     }
+
+    private CurrentWeatherReport mapCurrentWeatherDataToReport(CurrentWeatherDto weatherDto) {
+        CurrentWeatherReport currentWeatherReport = new CurrentWeatherReport();
+        currentWeatherReport.setCity(weatherDto.getCity());
+        currentWeatherReport.setTemperature(weatherDto.getMain().getTemp());
+
+        return currentWeatherReport;
+    }
 }
