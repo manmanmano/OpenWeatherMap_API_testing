@@ -1,6 +1,9 @@
 package icd0004.unit;
 
 import icd0004.api.WeatherApi;
+import icd0004.api.dto.CurrentWeatherDto;
+import icd0004.handler.CurrentWeatherHandler;
+import icd0004.report.CurrentWeatherReport;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
