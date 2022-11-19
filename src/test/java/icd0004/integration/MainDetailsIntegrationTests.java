@@ -4,8 +4,6 @@ import icd0004.api.WeatherApi;
 import icd0004.api.dto.CurrentWeatherDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainDetailsIntegrationTests {
@@ -26,7 +24,7 @@ public class MainDetailsIntegrationTests {
 
     @Test
     public void givenCityName_whenMakeRequestToOwnWeatherEndpoint_thenShouldHaveCoordinatesInDto() {
-        Double expectedLat = 50.984;
+        Double expectedLat = 50.904;
         Double expectedLon = -1.4043;
 
         CurrentWeatherDto actualDto = weatherApi.getCurrentWeatherData(CITY);
