@@ -7,6 +7,8 @@
     <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART1: failing tests for main details">
       <change afterPath="$PROJECT_DIR$/src/test/java/icd0004/integration/CurrentWeatherIntegrationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icd0004/report/CurrentWeatherReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/icd0004/report/CurrentWeatherReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/icd0004/unit/MainDetailsUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/icd0004/unit/MainDetailsUnitTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
