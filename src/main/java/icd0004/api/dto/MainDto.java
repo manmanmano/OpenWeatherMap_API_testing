@@ -1,5 +1,10 @@
 package icd0004.api.dto;
 
-public class MainDto {
+import lombok.Data;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class MainDto {
+    private Double temp;
 }
