@@ -45,6 +45,6 @@ public class CurrentWeatherReportUnitTests {
         CurrentWeatherHandler currentWeatherHandler = new CurrentWeatherHandler(weatherApiMock);
         CurrentWeatherReport currentWeatherReport = currentWeatherHandler.getCurrentWeatherReport(anyString());
 
-        assertThat(currentWeatherReport.getPressure).isEqualTo(press);
+        assertThat(currentWeatherReport.getPressure()).isEqualTo(press);
     }
 }

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART 1: test for temperature in current weather report">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART 1: failing unit test for pressure">
+      <change beforePath="$PROJECT_DIR$/src/main/java/icd0004/api/dto/MainDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/icd0004/api/dto/MainDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icd0004/report/CurrentWeatherReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/icd0004/report/CurrentWeatherReport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/icd0004/unit/CurrentWeatherReportUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/icd0004/unit/CurrentWeatherReportUnitTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +71,30 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.CurrentWeatherReportUnitTests.givenTemp_whenGetCurrentWeatherReport_thenReportShouldContainTemp">
+  <component name="RunManager" selected="Gradle.CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure">
+    <configuration name="CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;icd0004.unit.CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CurrentWeatherReportUnitTests.givenTemp_whenGetCurrentWeatherReport_thenReportShouldContainTemp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -165,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure" />
         <item itemvalue="Gradle.CurrentWeatherReportUnitTests.givenTemp_whenGetCurrentWeatherReport_thenReportShouldContainTemp" />
         <item itemvalue="Gradle.MainDetailsUnitTests.givenCity_whenGetMainDetails_thenReportShouldContainCity" />
         <item itemvalue="Gradle.SmokeTests" />
         <item itemvalue="Gradle.MainDetailsIntegrationTests.weatherShouldReturnHttp400withNoCity" />
-        <item itemvalue="Gradle.SmokeTests" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668854044820</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="PART 1: failing unit test for pressure">
+      <created>1668854341349</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668854341349</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +272,7 @@
     <MESSAGE value="PART1: fix imports" />
     <MESSAGE value="PART1: refactored mock test for city" />
     <MESSAGE value="PART 1: test for temperature in current weather report" />
-    <option name="LAST_COMMIT_MESSAGE" value="PART 1: test for temperature in current weather report" />
+    <MESSAGE value="PART 1: failing unit test for pressure" />
+    <option name="LAST_COMMIT_MESSAGE" value="PART 1: failing unit test for pressure" />
   </component>
 </project>

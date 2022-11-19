@@ -7,4 +7,5 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class MainDto {
     private Double temp;
+    private int pressure;
 }
