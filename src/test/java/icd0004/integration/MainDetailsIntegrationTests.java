@@ -1,9 +1,12 @@
 package icd0004.integration;
 
+import icd0004.api.WeatherApi;
+import icd0004.api.dto.CurrentWeatherDto;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainDetailsIntegrationTests {
     private static final String CITY = "Southampton";
