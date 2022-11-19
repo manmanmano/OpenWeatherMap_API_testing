@@ -6,6 +6,7 @@ import icd0004.api.dto.MainDto;
 import icd0004.handler.CurrentWeatherHandler;
 import icd0004.handler.MainDetailsHandler;
 import icd0004.report.CurrentWeatherReport;
+import icd0004.report.MainDetails;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -20,20 +21,7 @@ public class MainDetailsUnitTests {
 
     @Mock
     private WeatherApi weatherApiMock;
-
-    @Test
-    public void givenCity_whenGetCurrentWeatherReport_thenReportShouldContainCity(){
-        String city = "Keila";
-        CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
-        weatherDtoStub.setCity("Keila");
-        weatherDtoStub.setMain(new MainDto());
-        when(weatherApiMock.getCurrentWeatherData(anyString())).thenReturn(weatherDtoStub);
-        CurrentWeatherHandler currentWeatherHandler = new CurrentWeatherHandler(weatherApiMock);
-
-        CurrentWeatherReport currentWeatherReport = currentWeatherHandler.getCurrentWeatherReport(city);
-
-        assertThat(currentWeatherReport.getCity()).isEqualTo(city);
-    }
+    
     @Test
     public void givenCity_whenGetMainDeatils_thenReportShouldContainCity(){
         String city = "Keila";
