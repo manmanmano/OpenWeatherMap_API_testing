@@ -35,4 +35,32 @@ public class MainDetailsUnitTests {
 
         assertThat(mainDetails.getCity()).isEqualTo(city);
     }
+
+    @Test
+    public void givenCity_whenGetMainDetails_thenReportShouldContainCoordinates(){
+        String city = "Tallinn";
+        CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
+        weatherDtoStub.setCity("Tallinn");
+        weatherDtoStub.setMain(new MainDto());
+        when(weatherApiMock.getCurrentWeatherData(anyString())).thenReturn(weatherDtoStub);
+        MainDetailsHandler mainDetailsHandler = new MainDetailsHandler(weatherApiMock);
+
+        MainDetails mainDetails = mainDetailsHandler.getMainDetails(city);
+
+        assertThat(mainDetails.getCoordinates()).isEqualTo("59.44,24.75");
+    }
+
+    @Test
+    public void givenCity_whenGetMainDetails_thenReportShouldContainUnit(){
+        String city = "Paide";
+        CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
+        weatherDtoStub.setCity("Paide");
+        weatherDtoStub.setMain(new MainDto());
+        when(weatherApiMock.getCurrentWeatherData(anyString())).thenReturn(weatherDtoStub);
+        MainDetailsHandler mainDetailsHandler = new MainDetailsHandler(weatherApiMock);
+
+        MainDetails mainDetails = mainDetailsHandler.getMainDetails(city);
+
+        assertThat(mainDetails.getTemperatureUnit()).isEqualTo("Celsius");
+    }
 }
