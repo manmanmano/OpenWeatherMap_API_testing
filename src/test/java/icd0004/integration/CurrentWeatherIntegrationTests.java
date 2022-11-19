@@ -28,6 +28,6 @@ public class CurrentWeatherIntegrationTests {
     }
     @Test
     public void givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate() {
-        assertThat(currentWeatherReport.getDate())isNotNull();
+        assertThat(currentWeatherReport.getDate()).isNotNull();
     }
 }

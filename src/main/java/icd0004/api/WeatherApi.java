@@ -28,6 +28,5 @@ public class WeatherApi {
                 .queryParam("units", "metric")
                 .get(ClientResponse.class);
         return response.getEntity(CurrentWeatherDto.class);
-
     }
 }

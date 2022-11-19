@@ -5,6 +5,7 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -19,5 +20,5 @@ public class CurrentWeatherDto {
     private CoordinatesDto coordinates;
 
     @JsonProperty("dt")
-    private Instant date;
+    private long date;
 }
