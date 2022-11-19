@@ -7,4 +7,5 @@ public class CurrentWeatherReport {
     private Double temperature;
     private int pressure;
     private int humidity;
+    private String date;
 }
