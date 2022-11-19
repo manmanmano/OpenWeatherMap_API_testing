@@ -25,6 +25,10 @@ public class MainDetailsUnitTests {
         String city = "Keila";
         CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
         weatherDtoStub.setCity("Keila");
+        CoordinatesDto coordinatesDto = new CoordinatesDto();
+        coordinatesDto.setLat(59.44);
+        coordinatesDto.setLon(24.75);
+        weatherDtoStub.setCoordinates(coordinatesDto);
         when(weatherApiMock.getCurrentWeatherData(anyString())).thenReturn(weatherDtoStub);
         MainDetailsHandler mainDetailsHandler = new MainDetailsHandler(weatherApiMock);
 
