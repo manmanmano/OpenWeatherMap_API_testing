@@ -3,6 +3,7 @@ package icd0004.handler;
 import icd0004.api.WeatherApi;
 import icd0004.api.dto.CurrentWeatherDto;
 import icd0004.report.CurrentWeatherReport;
+import icd0004.report.MainDetails;
 
 public class MainDetailsHandler {
     private final WeatherApi weatherApi;
@@ -21,7 +22,7 @@ public class MainDetailsHandler {
         return mapDetailsToReport(weatherDto);
     }
 
-    private CurrentWeatherReport mapDetailsToReport(CurrentWeatherDto weatherDto) {
+    private MainDetails mapDetailsToReport(CurrentWeatherDto weatherDto) {
         MainDetails mainDetails = new MainDetails();
         mainDetails.setCity(weatherDto.getCity());
         return mainDetails;

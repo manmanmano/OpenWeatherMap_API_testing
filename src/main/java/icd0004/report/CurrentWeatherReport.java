@@ -4,6 +4,5 @@ import lombok.Data;
 
 @Data
 public class CurrentWeatherReport {
-    private String city;
     private Double temperature;
 }
