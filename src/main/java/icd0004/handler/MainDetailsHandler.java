@@ -26,6 +26,7 @@ public class MainDetailsHandler {
         MainDetails mainDetails = new MainDetails();
         mainDetails.setCity(weatherDto.getCity());
         mainDetails.setCoordinates(formatCoordinatesToString(weatherDto));
+        mainDetails.setTemperatureUnit("Celsius");
         return mainDetails;
     }
 
