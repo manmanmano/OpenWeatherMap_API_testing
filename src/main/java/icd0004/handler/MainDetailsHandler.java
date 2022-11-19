@@ -5,6 +5,8 @@ import icd0004.api.dto.CoordinatesDto;
 import icd0004.api.dto.CurrentWeatherDto;
 import icd0004.report.MainDetails;
 
+import java.text.DecimalFormat;
+
 public class MainDetailsHandler {
     private final WeatherApi weatherApi;
 
@@ -31,9 +33,9 @@ public class MainDetailsHandler {
     }
 
     private String formatCoordinatesToString(CurrentWeatherDto weatherDto) {
-
-        String lat = String.valueOf(weatherDto.getCoordinates().getLat());
-        String lon = String.valueOf(weatherDto.getCoordinates().getLon());
-        return lat + "," + lon;
+        Double lat = weatherDto.getCoordinates().getLat();
+        Double lon = weatherDto.getCoordinates().getLon();
+        DecimalFormat df = new DecimalFormat("0.00");
+        return df.format(lat) + "," + df.format(lon);
     }
 }
