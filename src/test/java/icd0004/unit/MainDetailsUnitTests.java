@@ -23,7 +23,7 @@ public class MainDetailsUnitTests {
     private WeatherApi weatherApiMock;
     
     @Test
-    public void givenCity_whenGetMainDeatils_thenReportShouldContainCity(){
+    public void givenCity_whenGetMainDetails_thenReportShouldContainCity(){
         String city = "Keila";
         CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
         weatherDtoStub.setCity("Keila");
@@ -35,5 +35,4 @@ public class MainDetailsUnitTests {
 
         assertThat(mainDetails.getCity()).isEqualTo(city);
     }
-
 }
