@@ -11,4 +11,5 @@ public class CurrentWeatherDto {
     @JsonProperty("name")
     private String city;
 
+    private MainDto main;
 }
