@@ -36,6 +36,16 @@ public class MainDetailsIntegrationTests {
     }
 
     @Test
+    public void givenCityName_whenGetMainDetails_thenReportShouldContainCity() {
+        String expectedCoordinates = "50.90,-1.40";
+
+        MainDetailsHandler mainDetailsHandler = new MainDetailsHandler(weatherApi);
+        MainDetails mainDetails = mainDetailsHandler.getMainDetails(CITY);
+
+        assertThat(mainDetails.getCity()).isEqualTo(CITY);
+    }
+
+    @Test
     public void givenCityName_whenGetMainDetails_thenReportShouldContainCoordinates() {
         String expectedCoordinates = "50.90,-1.40";
 
