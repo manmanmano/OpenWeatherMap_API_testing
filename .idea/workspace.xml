@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART1: OWM smoke tests" />
+    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART1: failing tests for main details">
+      <change afterPath="$PROJECT_DIR$/src/test/java/icd0004/integration/CurrentWeatherIntegrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668847019677</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="PART1: failing tests for main details">
+      <created>1668847352977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668847352977</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PART1: OWM smoke tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="PART1: OWM smoke tests" />
+    <MESSAGE value="PART1: failing tests for main details" />
+    <option name="LAST_COMMIT_MESSAGE" value="PART1: failing tests for main details" />
   </component>
 </project>
