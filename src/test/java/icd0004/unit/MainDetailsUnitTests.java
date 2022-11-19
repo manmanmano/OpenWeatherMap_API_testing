@@ -1,5 +1,6 @@
 package icd0004.unit;
 
+import icd0004.api.WeatherApi;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
