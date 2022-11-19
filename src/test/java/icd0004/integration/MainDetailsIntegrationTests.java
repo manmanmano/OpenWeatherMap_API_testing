@@ -37,7 +37,7 @@ public class MainDetailsIntegrationTests {
 
     @Test
     public void givenCityName_whenGetMainDetails_thenReportShouldContainCoordinates() {
-        String expectedCoordinates = "50.90,-1.49";
+        String expectedCoordinates = "50.90,-1.40";
 
         MainDetailsHandler mainDetailsHandler = new MainDetailsHandler(weatherApi);
         MainDetails mainDetails = mainDetailsHandler.getMainDetails(CITY);
