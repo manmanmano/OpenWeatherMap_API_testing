@@ -4,6 +4,9 @@ import lombok.Data;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CurrentWeatherDto {
@@ -15,4 +18,7 @@ public class CurrentWeatherDto {
 
     @JsonProperty("coord")
     private CoordinatesDto coordinates;
+
+    @JsonProperty("dt")
+    private long date;
 }

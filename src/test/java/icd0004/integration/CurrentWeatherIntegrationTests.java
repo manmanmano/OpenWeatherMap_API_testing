@@ -22,5 +22,12 @@ public class CurrentWeatherIntegrationTests {
     public void givenCity_whenGetCurrentWeatherReport_thenReportShouldContainTemperature() {
         assertThat(currentWeatherReport.getTemperature()).isNotNaN();
     }
-
+    @Test
+    public void givenCity_whenGetCurrentWeatherReport_thenReportShouldContainHumidity() {
+        assertThat(currentWeatherReport.getHumidity()).isNotNull();
+    }
+    @Test
+    public void givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate() {
+        assertThat(currentWeatherReport.getDate()).isNotNull();
+    }
 }

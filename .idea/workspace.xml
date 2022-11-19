@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART 1: pressure in weather handler">
+    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART 1: fields for date">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icd0004/api/WeatherApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/icd0004/api/WeatherApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icd0004/api/dto/CurrentWeatherDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/icd0004/api/dto/CurrentWeatherDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icd0004/handler/CurrentWeatherHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/icd0004/handler/CurrentWeatherHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/icd0004/integration/CurrentWeatherIntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/icd0004/integration/CurrentWeatherIntegrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +73,76 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.MainDetailsIntegrationTests.givenCityName_whenMakeRequestToOwnWeatherEndpoint_thenShouldHaveCoordinatesInDto">
+  <component name="RunManager" selected="Gradle.CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate">
+    <configuration name="CurrentWeatherIntegrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;icd0004.integration.CurrentWeatherIntegrationTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;icd0004.integration.CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainTemperature" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;icd0004.integration.CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainTemperature&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -84,29 +157,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;icd0004.unit.CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CurrentWeatherReportUnitTests.givenTemp_whenGetCurrentWeatherReport_thenReportShouldContainTemp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;icd0004.unit.CurrentWeatherReportUnitTests.givenTemp_whenGetCurrentWeatherReport_thenReportShouldContainTemp&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -139,59 +189,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainDetailsUnitTests.givenCity_whenGetMainDetails_thenReportShouldContainCity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;icd0004.unit.MainDetailsUnitTests.givenCity_whenGetMainDetails_thenReportShouldContainCity&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SmokeTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;icd0004.integration.SmokeTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate" />
+        <item itemvalue="Gradle.CurrentWeatherIntegrationTests" />
+        <item itemvalue="Gradle.CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainTemperature" />
         <item itemvalue="Gradle.MainDetailsIntegrationTests.givenCityName_whenMakeRequestToOwnWeatherEndpoint_thenShouldHaveCoordinatesInDto" />
         <item itemvalue="Gradle.CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure" />
-        <item itemvalue="Gradle.CurrentWeatherReportUnitTests.givenTemp_whenGetCurrentWeatherReport_thenReportShouldContainTemp" />
-        <item itemvalue="Gradle.MainDetailsUnitTests.givenCity_whenGetMainDetails_thenReportShouldContainCity" />
-        <item itemvalue="Gradle.SmokeTests" />
       </list>
     </recent_temporary>
   </component>
@@ -261,7 +265,35 @@
       <option name="project" value="LOCAL" />
       <updated>1668854556160</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="PART 1: failing test for humidity">
+      <created>1668857000281</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668857000281</updated>
+    </task>
+    <task id="LOCAL-00010" summary="PART 1: fixed test">
+      <created>1668857243259</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668857243259</updated>
+    </task>
+    <task id="LOCAL-00011" summary="PART 1: failing test for date">
+      <created>1668857334630</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668857334630</updated>
+    </task>
+    <task id="LOCAL-00012" summary="PART 1: fields for date">
+      <created>1668857531001</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668857531001</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +319,24 @@
     <MESSAGE value="PART 1: failing unit test for pressure" />
     <MESSAGE value="PART 1: pressure fields in classes" />
     <MESSAGE value="PART 1: pressure in weather handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="PART 1: pressure in weather handler" />
+    <MESSAGE value="PART 1: failing test for humidity" />
+    <MESSAGE value="PART 1: fixed test" />
+    <MESSAGE value="PART 1: failing test for date" />
+    <MESSAGE value="PART 1: fields for date" />
+    <option name="LAST_COMMIT_MESSAGE" value="PART 1: fields for date" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/icd0004/handler/CurrentWeatherHandler.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/icd0004_courseproject$CurrentWeatherIntegrationTests_givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate.ic" NAME="CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate Coverage Results" MODIFIED="1668857797635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
