@@ -24,6 +24,6 @@ public class CurrentWeatherIntegrationTests {
     }
     @Test
     public void givenCity_whenGetCurrentWeatherReport_thenReportShouldContainHumidity() {
-        assertThat(currentWeatherReport.getHumidity()).isNotNaN();
+        assertThat(currentWeatherReport.getHumidity()).isNotNull();
     }
 }

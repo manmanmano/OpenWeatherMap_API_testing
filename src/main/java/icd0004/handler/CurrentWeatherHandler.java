@@ -26,6 +26,7 @@ public class CurrentWeatherHandler {
         CurrentWeatherReport currentWeatherReport = new CurrentWeatherReport();
         currentWeatherReport.setTemperature(weatherDto.getMain().getTemp());
         currentWeatherReport.setPressure(weatherDto.getMain().getPressure());
+        currentWeatherReport.setHumidity(weatherDto.getMain().getHumidity());
         return currentWeatherReport;
     }
 }

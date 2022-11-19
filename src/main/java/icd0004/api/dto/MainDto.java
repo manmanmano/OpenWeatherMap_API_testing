@@ -8,4 +8,5 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 public class MainDto {
     private Double temp;
     private int pressure;
+    private int humidity;
 }
