@@ -26,8 +26,8 @@ public class MainDetailsUnitTests {
         CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
         weatherDtoStub.setCity("Keila");
         CoordinatesDto coordinatesDto = new CoordinatesDto();
-        coordinatesDto.setLat(59.44);
-        coordinatesDto.setLon(24.75);
+        coordinatesDto.setLat(0.0);
+        coordinatesDto.setLon(0.0);
         weatherDtoStub.setCoordinates(coordinatesDto);
         when(weatherApiMock.getCurrentWeatherData(anyString())).thenReturn(weatherDtoStub);
         MainDetailsHandler mainDetailsHandler = new MainDetailsHandler(weatherApiMock);
@@ -51,6 +51,22 @@ public class MainDetailsUnitTests {
         MainDetails mainDetails = mainDetailsHandler.getMainDetails(city);
 
         assertThat(mainDetails.getCoordinates()).isEqualTo("59.44,24.75");
+    }
+
+    @Test
+    public void givenCity_whenGetMainDetails_thenReportShouldContainUnit(){
+        String city = "Tallinn";
+        CoordinatesDto coordinatesDto = new CoordinatesDto();
+        coordinatesDto.setLat(0.0);
+        coordinatesDto.setLon(0.0);
+        CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
+        weatherDtoStub.setCoordinates(coordinatesDto);
+        when(weatherApiMock.getCurrentWeatherData(anyString())).thenReturn(weatherDtoStub);
+        MainDetailsHandler mainDetailsHandler = new MainDetailsHandler(weatherApiMock);
+
+        MainDetails mainDetails = mainDetailsHandler.getMainDetails(city);
+
+        assertThat(mainDetails.getTemperatureUnit()).isEqualTo("Celsius");
     }
 
 }
