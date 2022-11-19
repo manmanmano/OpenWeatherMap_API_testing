@@ -32,11 +32,16 @@ public class CurrentWeatherHandler {
         currentWeatherReport.setTemperature(weatherDto.getMain().getTemp());
         currentWeatherReport.setPressure(weatherDto.getMain().getPressure());
         currentWeatherReport.setHumidity(weatherDto.getMain().getHumidity());
-        Date date = new Date(weatherDto.getDate()*1000);
-        SimpleDateFormat jdf = new SimpleDateFormat("yyyy-MM-dd");
-        String java_date = jdf.format(date);
-        System.out.println(java_date);
-        currentWeatherReport.setDate(java_date);
+        currentWeatherReport.setDate(formatDateToString(weatherDto));
+
         return currentWeatherReport;
+    }
+
+    private String formatDateToString(CurrentWeatherDto weatherDto) {
+        Date date = new Date(weatherDto.getDate()*1000);
+        SimpleDateFormat formattedDate = new SimpleDateFormat("yyyy-MM-dd");
+        String stringDate = formattedDate.format(date);
+
+        return stringDate;
     }
 }

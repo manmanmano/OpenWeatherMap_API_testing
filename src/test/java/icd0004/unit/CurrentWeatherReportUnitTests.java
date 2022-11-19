@@ -33,6 +33,7 @@ public class CurrentWeatherReportUnitTests {
 
         assertThat(currentWeatherReport.getTemperature()).isEqualTo(temp);
     }
+
     @Test
     public void givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure(){
         int press = 1020;
