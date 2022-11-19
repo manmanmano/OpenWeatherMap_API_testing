@@ -12,4 +12,7 @@ public class CurrentWeatherDto {
     private String city;
 
     private MainDto main;
+
+    @JsonProperty("coord")
+    private CoordinatesDto coordinates;
 }

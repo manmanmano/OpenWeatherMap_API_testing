@@ -1,5 +1,12 @@
 package icd0004.integration;
 
+import icd0004.handler.CurrentWeatherHandler;
+import icd0004.report.CurrentWeatherReport;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class CurrentWeatherIntegrationTests {
     private CurrentWeatherReport currentWeatherReport;
 
