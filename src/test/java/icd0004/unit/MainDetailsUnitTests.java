@@ -33,5 +33,18 @@ public class MainDetailsUnitTests {
 
         assertThat(currentWeatherReport.getCity()).isEqualTo(city);
     }
+    @Test
+    public void givenCity_whenGetMainDeatils_thenReportShouldContainCity(){
+        String city = "Keila";
+        CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
+        weatherDtoStub.setCity("Keila");
+        weatherDtoStub.setMain(new MainDto());
+        when(weatherApiMock.getCurrentWeatherData(anyString())).thenReturn(weatherDtoStub);
+        MainDetailsHandler mainDetailsHandler = new MainDetailsHandler(weatherApiMock);
+
+        MainDetails mainDetails = mainDetailsHandler.getMainDetails(city);
+
+        assertThat(mainDetails.getCity()).isEqualTo(city);
+    }
 
 }
