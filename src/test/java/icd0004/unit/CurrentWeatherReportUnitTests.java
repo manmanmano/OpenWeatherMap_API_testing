@@ -33,4 +33,18 @@ public class CurrentWeatherReportUnitTests {
 
         assertThat(currentWeatherReport.getTemperature()).isEqualTo(temp);
     }
+    @Test
+    public void givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure(){
+        int press = 1020;
+        CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
+        weatherDtoStub.setCity(anyString());
+        MainDto mainDtoStub = new MainDto();
+        mainDtoStub.setPressure(press);
+        weatherDtoStub.setMain(mainDtoStub);
+        when(weatherApiMock.getCurrentWeatherData("Tallinn")).thenReturn(weatherDtoStub);
+        CurrentWeatherHandler currentWeatherHandler = new CurrentWeatherHandler(weatherApiMock);
+        CurrentWeatherReport currentWeatherReport = currentWeatherHandler.getCurrentWeatherReport(anyString());
+
+        assertThat(currentWeatherReport.getPressure).isEqualTo(press);
+    }
 }
