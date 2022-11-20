@@ -19,4 +19,8 @@ public class WeatherIntegrationTests {
     public void givenCity_weatherContainsCity(){
         assertThat(weather.getMainDetails().getCity()).isEqualTo(CITY);
     }
+    @Test
+    public void givenCity_weatherContainsTemperature(){
+        assertThat(weather.getCurrentWeatherReport().getTemperature()).isNotNaN();
+    }
 }
