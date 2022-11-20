@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART 1: fixed date">
-      <change afterPath="$PROJECT_DIR$/src/test/java/icd0004/unit/SerializationUnitTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_11_12_22,_12_11_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_11_12_22__12_11_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/icd0004/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/icd0004/Main.java" afterDir="false" />
+    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART 1: tests for weather">
+      <change afterPath="$PROJECT_DIR$/src/main/java/icd0004/handler/WeatherHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/icd0004/report/Weather.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +205,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668246834792</updated>
       <workItem from="1668251116766" duration="661000" />
-      <workItem from="1668923503333" duration="348000" />
+      <workItem from="1668923503333" duration="1124000" />
     </task>
     <task id="LOCAL-00001" summary="PART1: OWM smoke tests">
       <created>1668847019677</created>
@@ -301,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668859833399</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="PART 1: tests for weather">
+      <created>1668924498778</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1668924498778</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +336,8 @@
     <MESSAGE value="PART 1: failing test for date" />
     <MESSAGE value="PART 1: fields for date" />
     <MESSAGE value="PART 1: fixed date" />
-    <option name="LAST_COMMIT_MESSAGE" value="PART 1: fixed date" />
+    <MESSAGE value="PART 1: tests for weather" />
+    <option name="LAST_COMMIT_MESSAGE" value="PART 1: tests for weather" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/icd0004_courseproject$CurrentWeatherIntegrationTests_givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate.ic" NAME="CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate Coverage Results" MODIFIED="1668857797635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
