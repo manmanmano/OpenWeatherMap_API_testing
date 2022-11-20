@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART 1: tests for weather">
-      <change afterPath="$PROJECT_DIR$/src/main/java/icd0004/handler/WeatherHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/icd0004/report/Weather.java" afterDir="false" />
+    <list default="true" id="80600104-8188-4da3-b241-cea3b4437c50" name="Changes" comment="PART 1: test for temperature">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/icd0004/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/icd0004/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,64 +58,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
-  <component name="RunManager" selected="Gradle.MainDetailsIntegrationTests.givenCityName_whenMakeRequestToOwnWeatherEndpoint_thenShouldHaveCoordinatesInDto">
-    <configuration name="CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;icd0004.unit.CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CurrentWeatherReportUnitTests.givenTemp_whenGetCurrentWeatherReport_thenReportShouldContainTemp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;icd0004.unit.CurrentWeatherReportUnitTests.givenTemp_whenGetCurrentWeatherReport_thenReportShouldContainTemp&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
+}]]></component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="icd0004.Main" />
+      <module name="icd0004-courseproject.main" />
+      <option name="PROGRAM_PARAMETERS" value="Tartu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="icd0004.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="MainDetailsIntegrationTests.givenCityName_whenMakeRequestToOwnWeatherEndpoint_thenShouldHaveCoordinatesInDto" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -186,13 +155,43 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="WeatherIntegrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;icd0004.integration.WeatherIntegrationTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Gradle.MainDetailsIntegrationTests.givenCityName_whenMakeRequestToOwnWeatherEndpoint_thenShouldHaveCoordinatesInDto" />
+      <item itemvalue="Gradle.MainDetailsUnitTests.givenCity_whenGetMainDetails_thenReportShouldContainCity" />
+      <item itemvalue="Gradle.SmokeTests" />
+      <item itemvalue="Gradle.WeatherIntegrationTests" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.WeatherIntegrationTests" />
         <item itemvalue="Gradle.SmokeTests" />
         <item itemvalue="Gradle.MainDetailsUnitTests.givenCity_whenGetMainDetails_thenReportShouldContainCity" />
         <item itemvalue="Gradle.MainDetailsIntegrationTests.givenCityName_whenMakeRequestToOwnWeatherEndpoint_thenShouldHaveCoordinatesInDto" />
-        <item itemvalue="Gradle.CurrentWeatherReportUnitTests.givenTemp_whenGetCurrentWeatherReport_thenReportShouldContainTemp" />
-        <item itemvalue="Gradle.CurrentWeatherReportUnitTests.givenPressure_whenGetCurrentWeatherReport_thenReportShouldContainPressure" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +204,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668246834792</updated>
       <workItem from="1668251116766" duration="661000" />
-      <workItem from="1668923503333" duration="1124000" />
+      <workItem from="1668923503333" duration="1987000" />
     </task>
     <task id="LOCAL-00001" summary="PART1: OWM smoke tests">
       <created>1668847019677</created>
@@ -305,7 +304,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668924498778</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="PART 1: code for weather">
+      <created>1668925074932</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668925074932</updated>
+    </task>
+    <task id="LOCAL-00016" summary="PART 1: test for temperature">
+      <created>1668925197889</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1668925197889</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +350,9 @@
     <MESSAGE value="PART 1: fields for date" />
     <MESSAGE value="PART 1: fixed date" />
     <MESSAGE value="PART 1: tests for weather" />
-    <option name="LAST_COMMIT_MESSAGE" value="PART 1: tests for weather" />
+    <MESSAGE value="PART 1: code for weather" />
+    <MESSAGE value="PART 1: test for temperature" />
+    <option name="LAST_COMMIT_MESSAGE" value="PART 1: test for temperature" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/icd0004_courseproject$CurrentWeatherIntegrationTests_givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate.ic" NAME="CurrentWeatherIntegrationTests.givenCity_whenGetCurrentWeatherReport_thenReportShouldContainDate Coverage Results" MODIFIED="1668857797635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
