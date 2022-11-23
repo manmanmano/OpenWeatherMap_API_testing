@@ -26,7 +26,7 @@ public class ForecastWeatherHandler {
         ForecastResponseListDto forecastListDto = weatherApi.getForecastWeatherData(city);
         ArrayList<ForecastReport> forecastReport = new ArrayList<>();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3 && i < forecastListDto.getForecasts().size(); i++) {
             ForecastWeatherDto forecastWeather = forecastListDto.getForecasts().get(i);
             forecastReport.add(mapForecastWeatherDataToReport(forecastWeather));
         }
