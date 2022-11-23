@@ -5,10 +5,12 @@ import icd0004.report.ForecastReport;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ForecastWeatherIntegrationTests {
-    private ForecastReport forecastReport;
+    private ArrayList<ForecastReport> forecastReport;
 
     public static final String CITY = "Tartu";
 
@@ -20,21 +22,30 @@ public class ForecastWeatherIntegrationTests {
 
     @Test
     public void givenCity_whenGetForecastReport_thenReportShouldContainDate() {
-        assertThat(forecastReport.getDate()).isNotNull();
-    }
-
-    @Test
-    public void givenCity_whenGetForecastReport_thenReportShouldContainTemperature() {
-        assertThat(forecastReport.getWeather().getTemperature()).isNotNaN();
+        for (int i = 0; i < 3; i++) {
+            assertThat(forecastReport.get(i).getDate()).isNotNull();
+        }
     }
 
     @Test
     public void givenCity_whenGetForecastReport_thenReportShouldContainHumidity() {
-        assertThat(forecastReport.getWeather().getHumidity()).isNotNull();
+        for (int i = 0; i < 3; i++) {
+            assertThat(forecastReport.get(i).getWeather().getHumidity()).isNotNull();
+        }
     }
 
     @Test
     public void givenCity_whenGetForecastReport_thenReportShouldContainPressure() {
-        assertThat(forecastReport.getWeather().getPressure()).isNotNull();
+        for (int i = 0; i < 3; i++) {
+            assertThat(forecastReport.get(i).getWeather().getPressure()).isNotNull();
+        }
     }
+
+    @Test
+    public void givenCity_whenGetForecastReport_thenReportShouldContainTemperature() {
+        for (int i = 0; i < 3; i++) {
+            assertThat(forecastReport.get(i).getWeather().getTemperature()).isNotNull();
+        }
+    }
+
 }
