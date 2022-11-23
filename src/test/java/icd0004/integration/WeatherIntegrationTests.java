@@ -23,4 +23,16 @@ public class WeatherIntegrationTests {
     public void givenCity_weatherContainsTemperature(){
         assertThat(weather.getCurrentWeatherReport().getTemperature()).isNotNaN();
     }
+    @Test
+    public void givenCity_weatherContains3DayForecast(){
+        assertThat(weather.getForecasts().size()).isEqualTo(3);
+    }
+    @Test
+    public void givenCity_weatherForecastContainsPressure(){
+        assertThat(weather.getForecasts().get(0).getWeather().getPressure()).isNotNaN();
+    }
+    @Test
+    public void givenCity_weatherForecastContainsDate(){
+        assertThat(weather.getForecasts().get(0).getDate()).isNotEmpty();
+    }
 }
