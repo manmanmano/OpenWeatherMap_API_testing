@@ -29,7 +29,7 @@ public class WeatherIntegrationTests {
     }
     @Test
     public void givenCity_weatherForecastContainsPressure(){
-        assertThat(weather.getForecasts().get(0).getWeather().getPressure()).isNotNaN();
+        assertThat(weather.getForecasts().get(0).getWeather().getPressure()).isNotNull();
     }
     @Test
     public void givenCity_weatherForecastContainsDate(){
