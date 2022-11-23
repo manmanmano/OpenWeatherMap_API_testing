@@ -5,6 +5,7 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import icd0004.api.dto.CurrentWeatherDto;
+import icd0004.api.dto.ForecastResponseListDto;
 import icd0004.api.dto.ForecastWeatherDto;
 import org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider;
 
@@ -31,7 +32,7 @@ public class WeatherApi {
         return response.getEntity(CurrentWeatherDto.class);
     }
 
-    public ForecastWeatherDto getForecastWeatherData(String cityName) {
+    public ForecastResponseListDto getForecastWeatherData(String cityName) {
         String resourceUrl = BASE_URL + "/forecast";
 
         ClientConfig configuration = new DefaultClientConfig();
@@ -44,6 +45,6 @@ public class WeatherApi {
                 .queryParam("appid", API_KEY)
                 .queryParam("units", "metric")
                 .get(ClientResponse.class);
-        return response.getEntity(ForecastWeatherDto.class);
+        return response.getEntity(ForecastResponseListDto.class);
     }
 }
