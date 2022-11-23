@@ -8,5 +8,5 @@ import java.util.ArrayList;
 public class Weather {
     private MainDetails mainDetails;
     private CurrentWeatherReport currentWeatherReport;
-    private ArrayList<ForecastReport> forecasts;
+    private ArrayList<ForecastReport> forecastReport;
 }
