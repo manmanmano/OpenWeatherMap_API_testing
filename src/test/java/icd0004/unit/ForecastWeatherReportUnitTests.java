@@ -36,7 +36,25 @@ public class ForecastWeatherReportUnitTests {
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
         ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
-        assertThat(forecastWeatherReports.get(0).getDate()).isEqualTo("2022-11-28");
+        assertThat(forecastWeatherReports.get(0).getDate()).isEqualTo("28-11-2022");
+    }
+
+    @Test
+    public void givenDate_whenGetForecastWeatherReport_thenReportDatesAreRightFormat(){
+        ForecastResponseListDto listDto = new ForecastResponseListDto();
+        ArrayList<ForecastWeatherDto> forecastList = new ArrayList<>();
+        ForecastWeatherDto forecastWeatherDtoStub = new ForecastWeatherDto();
+        MainDto mainDtoStub = new MainDto();
+        forecastWeatherDtoStub.setDate(1669626000);
+        forecastWeatherDtoStub.setMain(mainDtoStub);
+        forecastList.add(forecastWeatherDtoStub);
+        listDto.setForecasts(forecastList);
+        when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
+        ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
+        ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+
+        assertThat(forecastWeatherReports.get(0).getDate()).isNotEqualTo("2022-11-28");
+        assertThat(forecastWeatherReports.get(0).getDate()).isEqualTo("28-11-2022");
     }
 
     @Test
