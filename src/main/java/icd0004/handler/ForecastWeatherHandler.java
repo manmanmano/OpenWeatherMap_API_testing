@@ -30,7 +30,7 @@ public class ForecastWeatherHandler {
         ForecastResponseListDto forecastListDto = weatherApi.getForecastWeatherData(city);
         ArrayList<ForecastReport> forecastReport = new ArrayList<>();
 
-        for (int i = (FORECAST_MAX_DURATION / HOURS_PER_FORECAST); i <= FORECAST_MAX_DURATION && i < forecastListDto.getForecasts().size(); i+=  (FORECAST_MAX_DURATION / HOURS_PER_FORECAST)) {
+        for (int i = Math.min(forecastListDto.getForecasts().size()-1, (FORECAST_MAX_DURATION / HOURS_PER_FORECAST)); i <= FORECAST_MAX_DURATION && i < forecastListDto.getForecasts().size(); i+=  (FORECAST_MAX_DURATION / HOURS_PER_FORECAST)) {
             ForecastWeatherDto forecastWeather = forecastListDto.getForecasts().get(i);
             forecastReport.add(mapForecastWeatherDataToReport(forecastWeather));
         }
