@@ -31,6 +31,7 @@ public class ForecastWeatherReportUnitTests {
         forecastWeatherDtoStub.setDate(1669626000);
         MainDto mainDtoStub = new MainDto();
         forecastWeatherDtoStub.setMain(mainDtoStub);
+        mainDtoStub.setTemp(10.0);
         forecastList.add(forecastWeatherDtoStub);
         listDto.setForecasts(forecastList);
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
@@ -45,6 +46,7 @@ public class ForecastWeatherReportUnitTests {
         ArrayList<ForecastWeatherDto> forecastList = new ArrayList<>();
         ForecastWeatherDto forecastWeatherDtoStub = new ForecastWeatherDto();
         MainDto mainDtoStub = new MainDto();
+        mainDtoStub.setTemp(10.0);
         forecastWeatherDtoStub.setDate(1669626000);
         forecastWeatherDtoStub.setMain(mainDtoStub);
         forecastList.add(forecastWeatherDtoStub);
@@ -79,6 +81,7 @@ public class ForecastWeatherReportUnitTests {
         ArrayList<ForecastWeatherDto> forecastList = new ArrayList<>();
         ForecastWeatherDto forecastWeatherDtoStub = new ForecastWeatherDto();
         MainDto mainDtoStub = new MainDto();
+        mainDtoStub.setTemp(10.0);
         mainDtoStub.setPressure(1023);
         forecastWeatherDtoStub.setMain(mainDtoStub);
         forecastList.add(forecastWeatherDtoStub);
@@ -96,6 +99,7 @@ public class ForecastWeatherReportUnitTests {
         ForecastWeatherDto forecastWeatherDtoStub = new ForecastWeatherDto();
         MainDto mainDtoStub = new MainDto();
         mainDtoStub.setHumidity(91);
+        mainDtoStub.setTemp(10.0);
         forecastWeatherDtoStub.setMain(mainDtoStub);
         forecastList.add(forecastWeatherDtoStub);
         listDto.setForecasts(forecastList);
