@@ -39,7 +39,7 @@ public class CurrentWeatherHandler {
 
     private String formatDateToString(CurrentWeatherDto weatherDto) {
         Date date = new Date(weatherDto.getDate()*1000);
-        SimpleDateFormat formattedDate = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat formattedDate = new SimpleDateFormat("dd-MM-yyyy");
 
         return formattedDate.format(date);
     }

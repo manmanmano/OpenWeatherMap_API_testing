@@ -47,8 +47,9 @@ public class ForecastWeatherIntegrationTests {
             assertThat(forecastReport.get(i).getWeather().getTemperature()).isNotNull();
         }
     }
+
     @Test
-    public void givenCity_forecastDatesAreDifferent(){
+    public void givenCity_whenGetForecastReport_thenDatesAreDifferent(){
         assertThat(forecastReport.get(0).getDate()).isNotEqualTo(forecastReport.get(1).getDate());
         assertThat(forecastReport.get(1).getDate()).isNotEqualTo(forecastReport.get(2).getDate());
     }
