@@ -48,4 +48,19 @@ public class CurrentWeatherReportUnitTests {
 
         assertThat(currentWeatherReport.getPressure()).isEqualTo(press);
     }
+
+    @Test
+    public void givenDate_whenGetCurrentWeatherReport_thenReportDatesAreRightFormat(){
+        CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
+        weatherDtoStub.setCity(anyString());
+        MainDto mainDtoStub = new MainDto();
+        weatherDtoStub.setMain(mainDtoStub);
+        weatherDtoStub.setDate(1669399200);
+        when(weatherApiMock.getCurrentWeatherData("Tallinn")).thenReturn(weatherDtoStub);
+        CurrentWeatherHandler currentWeatherHandler = new CurrentWeatherHandler(weatherApiMock);
+        CurrentWeatherReport currentWeatherReport = currentWeatherHandler.getCurrentWeatherReport(anyString());
+
+        assertThat(currentWeatherReport.getDate()).isNotEqualTo("2022-11-25");
+        assertThat(currentWeatherReport.getDate()).isEqualTo("25-11-2022");
+    }
 }
