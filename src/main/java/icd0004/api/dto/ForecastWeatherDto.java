@@ -9,6 +9,5 @@ import org.codehaus.jackson.annotate.JsonProperty;
 public class ForecastWeatherDto {
     @JsonProperty("dt")
     private long date;
-
     private MainDto main;
 }
