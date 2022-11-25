@@ -29,7 +29,7 @@ public class CurrentWeatherHandler {
 
     private CurrentWeatherReport mapCurrentWeatherDataToReport(CurrentWeatherDto weatherDto) {
         CurrentWeatherReport currentWeatherReport = new CurrentWeatherReport();
-        currentWeatherReport.setTemperature(weatherDto.getMain().getTemp());
+        currentWeatherReport.setTemperature((int)Math.round(weatherDto.getMain().getTemp()));
         currentWeatherReport.setPressure(weatherDto.getMain().getPressure());
         currentWeatherReport.setHumidity(weatherDto.getMain().getHumidity());
         currentWeatherReport.setDate(formatDateToString(weatherDto));
