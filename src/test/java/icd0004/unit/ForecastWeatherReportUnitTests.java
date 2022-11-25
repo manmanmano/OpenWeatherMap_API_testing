@@ -52,7 +52,7 @@ public class ForecastWeatherReportUnitTests {
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
         ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
-        assertThat(forecastWeatherReports.get(0).getWeather().getTemperature()).isEqualTo(10.0);
+        assertThat(forecastWeatherReports.get(0).getWeather().getTemperature()).isEqualTo(10);
     }
 
     @Test

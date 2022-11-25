@@ -31,7 +31,7 @@ public class CurrentWeatherReportUnitTests {
         CurrentWeatherHandler currentWeatherHandler = new CurrentWeatherHandler(weatherApiMock);
         CurrentWeatherReport currentWeatherReport = currentWeatherHandler.getCurrentWeatherReport(anyString());
 
-        assertThat(currentWeatherReport.getTemperature()).isEqualTo(temp);
+        assertThat(currentWeatherReport.getTemperature()).isEqualTo(-5);
     }
 
     @Test

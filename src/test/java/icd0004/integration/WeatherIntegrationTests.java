@@ -21,7 +21,7 @@ public class WeatherIntegrationTests {
     }
     @Test
     public void givenCity_weatherContainsTemperature(){
-        assertThat(weather.getCurrentWeatherReport().getTemperature()).isNotNaN();
+        assertThat(weather.getCurrentWeatherReport().getTemperature()).isNotNull();
     }
     @Test
     public void givenCity_weatherContains3DayForecast(){
