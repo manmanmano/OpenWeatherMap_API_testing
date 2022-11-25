@@ -25,14 +25,14 @@ public class WeatherIntegrationTests {
     }
     @Test
     public void givenCity_weatherContains3DayForecast(){
-        assertThat(weather.getForecastReport().size()).isEqualTo(3);
+        assertThat(weather.getForecastWeatherReport().size()).isEqualTo(3);
     }
     @Test
     public void givenCity_weatherForecastContainsPressure(){
-        assertThat(weather.getForecastReport().get(0).getWeather().getPressure()).isNotNull();
+        assertThat(weather.getForecastWeatherReport().get(0).getWeather().getPressure()).isNotNull();
     }
     @Test
     public void givenCity_weatherForecastContainsDate(){
-        assertThat(weather.getForecastReport().get(0).getDate()).isNotEmpty();
+        assertThat(weather.getForecastWeatherReport().get(0).getDate()).isNotEmpty();
     }
 }

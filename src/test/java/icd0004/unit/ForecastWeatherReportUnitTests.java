@@ -5,7 +5,7 @@ import icd0004.api.dto.ForecastResponseListDto;
 import icd0004.api.dto.ForecastWeatherDto;
 import icd0004.api.dto.MainDto;
 import icd0004.handler.ForecastWeatherHandler;
-import icd0004.report.ForecastReport;
+import icd0004.report.ForecastWeatherReport;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -36,7 +36,7 @@ public class ForecastWeatherReportUnitTests {
         listDto.setForecasts(forecastList);
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
-        ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+        ArrayList<ForecastWeatherReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
 
         assertThat(forecastWeatherReports.get(0).getDate()).isEqualTo("28-11-2022");
     }
@@ -54,7 +54,7 @@ public class ForecastWeatherReportUnitTests {
         listDto.setForecasts(forecastList);
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
-        ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+        ArrayList<ForecastWeatherReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
 
         assertThat(forecastWeatherReports.get(0).getDate()).isNotEqualTo("2022-11-28");
         assertThat(forecastWeatherReports.get(0).getDate()).isEqualTo("28-11-2022");
@@ -72,7 +72,7 @@ public class ForecastWeatherReportUnitTests {
         listDto.setForecasts(forecastList);
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
-        ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+        ArrayList<ForecastWeatherReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
 
         assertThat(forecastWeatherReports.get(0).getWeather().getTemperature()).isEqualTo(10);
     }
@@ -90,7 +90,7 @@ public class ForecastWeatherReportUnitTests {
         listDto.setForecasts(forecastList);
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
-        ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+        ArrayList<ForecastWeatherReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
 
         assertThat(forecastWeatherReports.get(0).getWeather().getPressure()).isEqualTo(1023);
     }
@@ -108,7 +108,7 @@ public class ForecastWeatherReportUnitTests {
         listDto.setForecasts(forecastList);
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
-        ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+        ArrayList<ForecastWeatherReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
 
         assertThat(forecastWeatherReports.get(0).getWeather().getHumidity()).isEqualTo(91);
     }
