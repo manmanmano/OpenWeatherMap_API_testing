@@ -24,7 +24,7 @@ public class ForecastWeatherReportUnitTests {
     private WeatherApi weatherApiMock;
 
     @Test
-    public void givenDate_whenForecastReport_thenReportShouldContainDate() {
+    public void givenDate_whenGetForecastReport_thenReportShouldContainDate() {
         ForecastResponseListDto listDto = new ForecastResponseListDto();
         ArrayList<ForecastWeatherDto> forecastList = new ArrayList<>();
         ForecastWeatherDto forecastWeatherDtoStub = new ForecastWeatherDto();
@@ -37,6 +37,7 @@ public class ForecastWeatherReportUnitTests {
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
         ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+
         assertThat(forecastWeatherReports.get(0).getDate()).isEqualTo("28-11-2022");
     }
 
@@ -60,7 +61,7 @@ public class ForecastWeatherReportUnitTests {
     }
 
     @Test
-    public void givenTemperature_whenForecastReport_thenReportShouldContainTemperature() {
+    public void givenTemperature_whenGetForecastReport_thenReportShouldContainTemperature() {
         ForecastResponseListDto listDto = new ForecastResponseListDto();
         ArrayList<ForecastWeatherDto> forecastList = new ArrayList<>();
         ForecastWeatherDto forecastWeatherDtoStub = new ForecastWeatherDto();
@@ -72,11 +73,12 @@ public class ForecastWeatherReportUnitTests {
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
         ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+
         assertThat(forecastWeatherReports.get(0).getWeather().getTemperature()).isEqualTo(10);
     }
 
     @Test
-    public void givenPressure_whenForecastReport_thenReportShouldContainPressure() {
+    public void givenPressure_whenGetForecastReport_thenReportShouldContainPressure() {
         ForecastResponseListDto listDto = new ForecastResponseListDto();
         ArrayList<ForecastWeatherDto> forecastList = new ArrayList<>();
         ForecastWeatherDto forecastWeatherDtoStub = new ForecastWeatherDto();
@@ -89,11 +91,12 @@ public class ForecastWeatherReportUnitTests {
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
         ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+
         assertThat(forecastWeatherReports.get(0).getWeather().getPressure()).isEqualTo(1023);
     }
 
     @Test
-    public void givenHumidity_whenForecastReport_thenReportShouldContainHumidity() {
+    public void givenHumidity_whenGetForecastReport_thenReportShouldContainHumidity() {
         ForecastResponseListDto listDto = new ForecastResponseListDto();
         ArrayList<ForecastWeatherDto> forecastList = new ArrayList<>();
         ForecastWeatherDto forecastWeatherDtoStub = new ForecastWeatherDto();
@@ -106,6 +109,7 @@ public class ForecastWeatherReportUnitTests {
         when(weatherApiMock.getForecastWeatherData(anyString())).thenReturn(listDto);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApiMock);
         ArrayList<ForecastReport> forecastWeatherReports = forecastWeatherHandler.getForecastWeatherReport(anyString());
+
         assertThat(forecastWeatherReports.get(0).getWeather().getHumidity()).isEqualTo(91);
     }
 }
