@@ -44,7 +44,7 @@ public class ForecastWeatherHandler {
         ForecastWeather forecastWeather = new ForecastWeather();
         forecastWeather.setPressure(weatherDto.getMain().getPressure());
         forecastWeather.setHumidity(weatherDto.getMain().getHumidity());
-        forecastWeather.setTemperature(weatherDto.getMain().getTemp());
+        forecastWeather.setTemperature((int)Math.round(weatherDto.getMain().getTemp()));
         forecastReport.setWeather(forecastWeather);
         return forecastReport;
     }
