@@ -6,7 +6,6 @@ import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 import icd0004.api.dto.CurrentWeatherDto;
 import icd0004.api.dto.ForecastResponseListDto;
-import icd0004.api.dto.ForecastWeatherDto;
 import org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider;
 
 import static com.sun.jersey.api.client.Client.create;

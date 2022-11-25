@@ -1,7 +1,6 @@
 package icd0004.handler;
 
 import icd0004.api.WeatherApi;
-import icd0004.api.dto.CoordinatesDto;
 import icd0004.api.dto.CurrentWeatherDto;
 import icd0004.report.MainDetails;
 

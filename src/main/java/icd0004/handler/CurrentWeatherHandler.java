@@ -5,8 +5,6 @@ import icd0004.api.dto.CurrentWeatherDto;
 import icd0004.report.CurrentWeatherReport;
 
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class CurrentWeatherHandler {
