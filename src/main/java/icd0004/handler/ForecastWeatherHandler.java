@@ -29,7 +29,11 @@ public class ForecastWeatherHandler {
         int FORECAST_MAX_DAYS = 3;
         int HOURS_PER_FORECAST = 3;
         int FORECAST_MAX_DURATION = (FORECAST_MAX_DAYS * 24) / HOURS_PER_FORECAST;
-        for (int i = Math.min(forecastListDto.getForecasts().size() - 1, (FORECAST_MAX_DURATION / HOURS_PER_FORECAST)); i <= FORECAST_MAX_DURATION && i < forecastListDto.getForecasts().size(); i += (FORECAST_MAX_DURATION / HOURS_PER_FORECAST)) {
+
+        for (int i = Math.min(forecastListDto.getForecasts().size() - 1, (FORECAST_MAX_DURATION / HOURS_PER_FORECAST));
+             i <= FORECAST_MAX_DURATION && i < forecastListDto.getForecasts().size();
+             i += (FORECAST_MAX_DURATION / HOURS_PER_FORECAST)) {
+
             ForecastWeatherDto forecastWeather = forecastListDto.getForecasts().get(i);
             forecastWeatherReport.add(mapForecastWeatherDataToReport(forecastWeather));
         }
