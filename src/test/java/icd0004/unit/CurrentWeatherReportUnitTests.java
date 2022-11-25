@@ -41,6 +41,7 @@ public class CurrentWeatherReportUnitTests {
         weatherDtoStub.setCity(anyString());
         MainDto mainDtoStub = new MainDto();
         mainDtoStub.setPressure(press);
+        mainDtoStub.setTemp(0.0);
         weatherDtoStub.setMain(mainDtoStub);
         when(weatherApiMock.getCurrentWeatherData("Tallinn")).thenReturn(weatherDtoStub);
         CurrentWeatherHandler currentWeatherHandler = new CurrentWeatherHandler(weatherApiMock);
@@ -54,6 +55,7 @@ public class CurrentWeatherReportUnitTests {
         CurrentWeatherDto weatherDtoStub = new CurrentWeatherDto();
         weatherDtoStub.setCity(anyString());
         MainDto mainDtoStub = new MainDto();
+        mainDtoStub.setTemp(0.0);
         weatherDtoStub.setMain(mainDtoStub);
         weatherDtoStub.setDate(1669399200);
         when(weatherApiMock.getCurrentWeatherData("Tallinn")).thenReturn(weatherDtoStub);
