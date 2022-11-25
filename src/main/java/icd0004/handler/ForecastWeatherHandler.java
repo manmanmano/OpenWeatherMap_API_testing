@@ -22,11 +22,15 @@ public class ForecastWeatherHandler {
         this.weatherApi = weatherApi;
     }
 
+    private final int HOURS_PER_FORECAST = 3;
+    private final int FORECAST_MAX_DAYS = 3;
+    private final int FORECAST_MAX_DURATION = (FORECAST_MAX_DAYS * 24)/HOURS_PER_FORECAST;
+
     public ArrayList<ForecastReport> getForecastWeatherReport(String city) {
         ForecastResponseListDto forecastListDto = weatherApi.getForecastWeatherData(city);
         ArrayList<ForecastReport> forecastReport = new ArrayList<>();
 
-        for (int i = 0; i < 3 && i < forecastListDto.getForecasts().size(); i++) {
+        for (int i = (FORECAST_MAX_DURATION / HOURS_PER_FORECAST); i <= FORECAST_MAX_DURATION && i < forecastListDto.getForecasts().size(); i+=  (FORECAST_MAX_DURATION / HOURS_PER_FORECAST)) {
             ForecastWeatherDto forecastWeather = forecastListDto.getForecasts().get(i);
             forecastReport.add(mapForecastWeatherDataToReport(forecastWeather));
         }
