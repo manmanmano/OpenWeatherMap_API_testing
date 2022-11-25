@@ -28,6 +28,7 @@ public class MainDetailsHandler {
         mainDetails.setCity(weatherDto.getCity());
         mainDetails.setCoordinates(formatCoordinatesToString(weatherDto));
         mainDetails.setTemperatureUnit("Celsius");
+
         return mainDetails;
     }
 
@@ -35,6 +36,7 @@ public class MainDetailsHandler {
         Double lat = weatherDto.getCoordinates().getLat();
         Double lon = weatherDto.getCoordinates().getLon();
         DecimalFormat df = new DecimalFormat("0.00");
+
         return df.format(lat) + "," + df.format(lon);
     }
 }

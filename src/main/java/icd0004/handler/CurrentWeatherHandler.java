@@ -27,7 +27,7 @@ public class CurrentWeatherHandler {
 
     private CurrentWeatherReport mapCurrentWeatherDataToReport(CurrentWeatherDto weatherDto) {
         CurrentWeatherReport currentWeatherReport = new CurrentWeatherReport();
-        currentWeatherReport.setTemperature((int)Math.round(weatherDto.getMain().getTemp()));
+        currentWeatherReport.setTemperature((int) Math.round(weatherDto.getMain().getTemp()));
         currentWeatherReport.setPressure(weatherDto.getMain().getPressure());
         currentWeatherReport.setHumidity(weatherDto.getMain().getHumidity());
         currentWeatherReport.setDate(formatDateToString(weatherDto));
@@ -36,7 +36,7 @@ public class CurrentWeatherHandler {
     }
 
     private String formatDateToString(CurrentWeatherDto weatherDto) {
-        Date date = new Date(weatherDto.getDate()*1000);
+        Date date = new Date(weatherDto.getDate() * 1000);
         SimpleDateFormat formattedDate = new SimpleDateFormat("dd-MM-yyyy");
 
         return formattedDate.format(date);
