@@ -7,6 +7,7 @@ import org.codehaus.jackson.map.ObjectWriter;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 
 public class Main {
 
@@ -18,7 +19,10 @@ public class Main {
         String json = ow.writeValueAsString(weather);
         System.out.println(json);
     }
-    public static File writeJsonToFile(String json){
+    public static File writeJsonToFile(String json, String city) throws IOException {
+        File weatherFile = new File(city.toLowerCase() + ".json");
+        Files.write(weatherFile.toPath(), json.getBytes());
 
+        return weatherFile;
     }
 }

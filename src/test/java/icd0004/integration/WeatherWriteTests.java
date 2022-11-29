@@ -20,7 +20,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class WeatherWriteTests {
     @Test
     public void givenListOfCitiesAsFile_mainWritesWeatherToFile(@TempDir Path tempDir) throws IOException {
-        Path cities = tempDir.resolve("cities.txt");
         List<String> cityList = Arrays.asList("Tallinn", "Helsinki");
         WeatherHandler weatherHandler = new WeatherHandler();
         List<Weather> weatherReports = new ArrayList<>();
@@ -31,8 +30,8 @@ public class WeatherWriteTests {
         for (Weather weather : weatherReports) {
             ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
             String json = ow.writeValueAsString(weather);
-            File weatherFile = Main.writeJsonToFile(json);
-            assertThat(weatherFile.getName()).isEqualTo(weather.getMainDetails().getCity().toLowerCase() + ".txt");
+            File weatherFile = Main.writeJsonToFile(json, weather.getMainDetails().getCity());
+            assertThat(weatherFile.getName()).isEqualTo(weather.getMainDetails().getCity().toLowerCase() + ".json");
         }
     }
 }
