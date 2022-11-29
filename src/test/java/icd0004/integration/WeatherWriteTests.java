@@ -55,4 +55,23 @@ public class WeatherWriteTests {
             assertThat(weatherFile.getName()).isEqualTo(weather.getMainDetails().getCity().toLowerCase() + ".json");
         }
     }
+    @Test
+    public void givenFileOfCity_writesWeatherToFile(@TempDir Path tempDir) throws IOException {
+        Path cities = tempDir.resolve("cities.txt");
+        List<String> cityList = List.of("Buffalo");
+        Files.write(cities, cityList);
+
+        List<String> cityListOut = WeatherFileReader.getCities(cities.toString());
+        WeatherHandler weatherHandler = new WeatherHandler();
+        List<Weather> weatherReports = new ArrayList<>();
+        for (String city : cityListOut) {
+            weatherReports.add(weatherHandler.getWeather(city));
+        }
+        for (Weather weather : weatherReports) {
+            ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+            String json = ow.writeValueAsString(weather);
+            File weatherFile = Main.writeJsonToFile(json, weather.getMainDetails().getCity());
+            assertThat(weatherFile.getName()).isEqualTo(weather.getMainDetails().getCity().toLowerCase() + ".json");
+        }
+    }
 }
