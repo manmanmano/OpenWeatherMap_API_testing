@@ -32,4 +32,9 @@ public class FileReaderUnitTests {
         cities.toFile().createNewFile();
         assertThat(WeatherFileReader.getCities(cities.toString())).isEqualTo(List.of());
     }
+    @Test
+    public void whenFileHasWrongExtension_returnEmptyList(@TempDir Path tempDir) throws IOException {
+        Path cities = tempDir.resolve("cities.md");
+        assertThat(WeatherFileReader.getCities(cities.toString())).isEqualTo(List.of());
+    }
 }

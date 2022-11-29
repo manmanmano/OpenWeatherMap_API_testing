@@ -9,6 +9,9 @@ import java.util.List;
 
 public class WeatherFileReader {
     public static List<String> getCities(String absolutePath) throws IOException {
+        if(!absolutePath.substring(absolutePath.lastIndexOf(".") + 1).equals("txt")){
+            return List.of();
+        }
         Path filePath = Paths.get(absolutePath);
         if(!Files.exists(filePath)){
             return List.of();
