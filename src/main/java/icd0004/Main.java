@@ -5,6 +5,7 @@ import icd0004.report.Weather;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.ObjectWriter;
 
+import java.io.File;
 import java.io.IOException;
 
 public class Main {
@@ -16,5 +17,8 @@ public class Main {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
         String json = ow.writeValueAsString(weather);
         System.out.println(json);
+    }
+    public static File writeJsonToFile(String json){
+
     }
 }
