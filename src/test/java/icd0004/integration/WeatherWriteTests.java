@@ -1,7 +1,7 @@
 package icd0004.integration;
 
-import icd0004.Main;
 import icd0004.handler.WeatherFileReader;
+import icd0004.handler.WeatherFileWriter;
 import icd0004.handler.WeatherHandler;
 import icd0004.report.Weather;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -32,7 +32,7 @@ public class WeatherWriteTests {
         for (Weather weather : weatherReports) {
             ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
             String json = ow.writeValueAsString(weather);
-            File weatherFile = Main.writeJsonToFile(json, weather.getMainDetails().getCity());
+            File weatherFile = WeatherFileWriter.writeJsonToFile(json, weather.getMainDetails().getCity());
             assertThat(weatherFile.getName()).isEqualTo(weather.getMainDetails().getCity().toLowerCase() + ".json");
         }
     }
@@ -51,7 +51,7 @@ public class WeatherWriteTests {
         for (Weather weather : weatherReports) {
             ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
             String json = ow.writeValueAsString(weather);
-            File weatherFile = Main.writeJsonToFile(json, weather.getMainDetails().getCity());
+            File weatherFile = WeatherFileWriter.writeJsonToFile(json, weather.getMainDetails().getCity());
             assertThat(weatherFile.getName()).isEqualTo(weather.getMainDetails().getCity().toLowerCase() + ".json");
         }
     }
@@ -70,7 +70,7 @@ public class WeatherWriteTests {
         for (Weather weather : weatherReports) {
             ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
             String json = ow.writeValueAsString(weather);
-            File weatherFile = Main.writeJsonToFile(json, weather.getMainDetails().getCity());
+            File weatherFile = WeatherFileWriter.writeJsonToFile(json, weather.getMainDetails().getCity());
             assertThat(weatherFile.getName()).isEqualTo(weather.getMainDetails().getCity().toLowerCase() + ".json");
         }
     }
