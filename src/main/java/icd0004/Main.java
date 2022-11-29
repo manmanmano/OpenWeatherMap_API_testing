@@ -17,7 +17,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         WeatherHandler weatherHandler = new WeatherHandler();
         if(!args[0].substring(args[0].lastIndexOf(".") + 1).equals("txt")){
-            getWeatherFromFile(args[0], weatherHandler);
+            if(!getWeatherFromFile(args[0], weatherHandler)){
+                System.out.println("Error reading file! Either the extension is wrong or the file is empty or missing.");
+            }
         }
         else {
             System.out.println(getWeatherFromString(args[0], weatherHandler));
@@ -31,11 +33,10 @@ public class Main {
         return ow.writeValueAsString(weather);
     }
 
-    public static void getWeatherFromFile(String filename, WeatherHandler weatherHandler) throws IOException {
+    public static boolean getWeatherFromFile(String filename, WeatherHandler weatherHandler) throws IOException {
         List<String> cities = WeatherFileReader.getCities(filename);
         if(cities.isEmpty()){
-            System.out.println("Error reading file");
-            return;
+            return false;
         }
         List<Weather> weatherReports = new ArrayList<>();
         for (String s : cities) {
@@ -46,5 +47,6 @@ public class Main {
             String json = ow.writeValueAsString(weatherReport);
             writeJsonToFile(json, weatherReport.getMainDetails().getCity());
         }
+        return true;
     }
 }
