@@ -21,4 +21,15 @@ public class FileReaderUnitTests {
 
         assertThat(WeatherFileReader.getCities(cities.toString())).isEqualTo(cityList);
     }
+    @Test
+    public void whenFileDoesNotExist_ReturnsEmptyList(@TempDir Path tempDir) throws IOException {
+        Path cities = tempDir.resolve("cities.txt");
+        assertThat(WeatherFileReader.getCities(cities.toString())).isEqualTo(List.of());
+    }
+    @Test
+    public void whenFileIsEmpty_ReturnsEmptyList(@TempDir Path tempDir) throws IOException {
+        Path cities = tempDir.resolve("cities.txt");
+        cities.toFile().createNewFile();
+        assertThat(WeatherFileReader.getCities(cities.toString())).isEqualTo(List.of());
+    }
 }
