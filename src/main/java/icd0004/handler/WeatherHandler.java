@@ -19,6 +19,9 @@ public class WeatherHandler {
         MainDetailsHandler mainDetailsHandler = new MainDetailsHandler(weatherApi);
         CurrentWeatherHandler currentWeatherHandler = new CurrentWeatherHandler(weatherApi);
         ForecastWeatherHandler forecastWeatherHandler = new ForecastWeatherHandler(weatherApi);
+        if(currentWeatherHandler.getCurrentWeatherReport(city) == null){
+            return null;
+        }
         weather.setCurrentWeatherReport(currentWeatherHandler.getCurrentWeatherReport(city));
         weather.setMainDetails(mainDetailsHandler.getMainDetails(city));
         weather.setForecastWeatherReport(forecastWeatherHandler.getForecastWeatherReport(city));

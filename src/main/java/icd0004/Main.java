@@ -42,6 +42,7 @@ public class Main {
         for (String s : cities) {
             weatherReports.add(weatherHandler.getWeather(s));
         }
+        weatherReports.remove(null);
         for (Weather weatherReport : weatherReports) {
             ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
             String json = ow.writeValueAsString(weatherReport);
