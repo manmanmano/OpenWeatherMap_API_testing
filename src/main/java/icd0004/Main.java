@@ -39,6 +39,9 @@ public class Main {
 
     public static String getWeatherFromString(String city, WeatherHandler weatherHandler) throws IOException {
         Weather weather = weatherHandler.getWeather(city);
+        if(weather == null){
+            return "";
+        }
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
 
         return ow.writeValueAsString(weather);
