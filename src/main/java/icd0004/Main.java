@@ -14,15 +14,26 @@ import static icd0004.handler.WeatherFileWriter.writeJsonToFile;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         WeatherHandler weatherHandler = new WeatherHandler();
         if(args[0].substring(args[0].lastIndexOf(".") + 1).equals("txt")){
-            if(!getWeatherFromFile(args[0], weatherHandler)){
-                System.out.println("Error reading file! Either the extension is wrong or the file is empty or missing.");
+            try {
+                if(!getWeatherFromFile(args[0], weatherHandler)){
+                    System.out.println("Error reading file! Either the extension is wrong or the file is empty or missing.");
+                }
+            }
+            catch (IOException exception){
+                System.out.println(exception.getMessage());
             }
         }
         else {
-            System.out.println(getWeatherFromString(args[0], weatherHandler));
+            try {
+                String output = getWeatherFromString(args[0], weatherHandler);
+                System.out.println(output);
+            }
+            catch (IOException exception){
+                System.out.println(exception.getMessage());
+            }
         }
     }
 
