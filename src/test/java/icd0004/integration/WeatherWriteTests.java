@@ -86,6 +86,7 @@ public class WeatherWriteTests {
         for (String city : cityListOut) {
             weatherReports.add(weatherHandler.getWeather(city));
         }
+        weatherReports.remove(null);
         assertThat(weatherReports.size()).isEqualTo(1);
         for (Weather weather : weatherReports) {
             ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();

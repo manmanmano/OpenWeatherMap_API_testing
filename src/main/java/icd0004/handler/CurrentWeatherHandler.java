@@ -21,7 +21,9 @@ public class CurrentWeatherHandler {
 
     public CurrentWeatherReport getCurrentWeatherReport(String city) {
         CurrentWeatherDto weatherDto = weatherApi.getCurrentWeatherData(city);
-
+        if(weatherDto.getMain() == null){
+            return null;
+        }
         return mapCurrentWeatherDataToReport(weatherDto);
     }
 
