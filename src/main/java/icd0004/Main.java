@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         WeatherHandler weatherHandler = new WeatherHandler();
-        if(!args[0].substring(args[0].lastIndexOf(".") + 1).equals("txt")){
+        if(args[0].substring(args[0].lastIndexOf(".") + 1).equals("txt")){
             if(!getWeatherFromFile(args[0], weatherHandler)){
                 System.out.println("Error reading file! Either the extension is wrong or the file is empty or missing.");
             }
