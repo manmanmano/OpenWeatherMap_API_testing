@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class ForecastWeatherHandler {
-
     private final WeatherApi weatherApi;
 
     public ForecastWeatherHandler() {
@@ -25,9 +24,11 @@ public class ForecastWeatherHandler {
     public ArrayList<ForecastWeatherReport> getForecastWeatherReport(String city) {
         ForecastResponseListDto forecastListDto = weatherApi.getForecastWeatherData(city);
         ArrayList<ForecastWeatherReport> forecastWeatherReport = new ArrayList<>();
-        if(forecastListDto.getForecasts().get(0).getMain() == null){
+        if (forecastListDto.getForecasts().get(0).getMain() == null){
+
             return null;
         }
+
         int FORECAST_MAX_DAYS = 3;
         int HOURS_PER_FORECAST = 3;
         int FORECAST_MAX_DURATION = (FORECAST_MAX_DAYS * 24) / HOURS_PER_FORECAST;

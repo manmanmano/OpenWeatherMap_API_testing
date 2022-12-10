@@ -28,6 +28,7 @@ public class WeatherApi {
                 .queryParam("appid", API_KEY)
                 .queryParam("units", "metric")
                 .get(ClientResponse.class);
+
         return response.getEntity(CurrentWeatherDto.class);
     }
 
@@ -44,6 +45,7 @@ public class WeatherApi {
                 .queryParam("appid", API_KEY)
                 .queryParam("units", "metric")
                 .get(ClientResponse.class);
+
         return response.getEntity(ForecastResponseListDto.class);
     }
 }

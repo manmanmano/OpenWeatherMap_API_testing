@@ -8,7 +8,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CurrentWeatherHandler {
-
     private final WeatherApi weatherApi;
 
     public CurrentWeatherHandler() {
@@ -22,8 +21,10 @@ public class CurrentWeatherHandler {
     public CurrentWeatherReport getCurrentWeatherReport(String city) {
         CurrentWeatherDto weatherDto = weatherApi.getCurrentWeatherData(city);
         if(weatherDto.getMain() == null){
+
             return null;
         }
+
         return mapCurrentWeatherDataToReport(weatherDto);
     }
 
