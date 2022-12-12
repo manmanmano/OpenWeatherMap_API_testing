@@ -26,10 +26,8 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
 }
 
-ext.javaMainClass = "icd0004.Main"
-
 application {
-    mainClassName = javaMainClass
+    mainClass.set("icd0004.Main")
 }
 
 test {
