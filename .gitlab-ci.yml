@@ -1,0 +1,24 @@
+image: gradle:alpine 
+stages: 
+  - build 
+  - test 
+
+build:
+  stage: build 
+  script: gradle --build-cache assemble
+  cache: 
+    key: "$CI_COMMIT_REF_NAME"
+    policy: push
+    paths: 
+      - build 
+      - .gradle
+
+test: 
+  stage: test
+  script: gradle test
+  cache: 
+    key:  "$CI_COMMIT_REF_NAME"
+    policy: push 
+    paths: 
+      - build 
+      - gradle 
