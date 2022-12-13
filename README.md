@@ -1,15 +1,12 @@
-# icd0004-courseproject
+# icd0004-courseproject "OpenWeatherMap query"
 
 ## Technological stack
+Console app using on Java 17. Built on Gradle 7.6. See `build.gradle` for a full list of dependencies.
 
-    - Java 17
-    - Gradle 7.4
+## Developers
+Mariano D'Angelo 201752IVSB
 
-## Participants
-
-    - Mariano D'Angelo 201752IVSB
-    - Mihkel Kiil 201748IVSB
-
+Mihkel Kiil 201748IVSB
 ## CLI 
 
 These commands are meant to be run on a Linux machine with gradle installed.
@@ -41,6 +38,13 @@ Kyiv
 ```
 
 For nonexistent cities no file will be written, and no data will be output to console.
+
+## Distributions
+After building the application, binaries can be found in `.gradle/distribtuions` in TAR or ZIP format. 
+To run a distribtution, use the applicable launch script for your OS in the `bin` directory of the distribution.
+````
+./icd0004-courseproject Helsinki
+````
 
 ## Example output
 

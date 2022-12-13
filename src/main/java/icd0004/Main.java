@@ -15,6 +15,10 @@ import static icd0004.handler.WeatherFileWriter.writeJsonToFile;
 public class Main {
 
     public static void main(String[] args) {
+        if(args.length == 0){
+            System.out.println("Please provide a city! Either as a console argument or a list in a file ending with .txt");
+            return;
+        }
         WeatherHandler weatherHandler = new WeatherHandler();
         if (args[0].substring(args[0].lastIndexOf(".") + 1).equals("txt")){
             try {
