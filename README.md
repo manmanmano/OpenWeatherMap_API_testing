@@ -40,7 +40,7 @@ Kyiv
 For nonexistent cities no file will be written, and no data will be output to console.
 
 ## Distributions
-After building the application, binaries can be found in `.gradle/distribtuions` in TAR or ZIP format. 
+After building the application, binaries can be found in `build/distribtuions` in TAR or ZIP format. 
 To run a distribtution, use the applicable launch script for your OS in the `bin` directory of the distribution.
 ````
 ./icd0004-courseproject Helsinki
